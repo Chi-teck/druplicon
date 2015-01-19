@@ -1,0 +1,20 @@
+{
+  "name": "chi/druplicon",
+  "require": {
+    "symfony/console": "~2.6",
+    "psr/log": "~1.0",
+    "fabpot/goutte": "~2.0",
+    "symfony/event-dispatcher": "~2.6",
+    "pimple/pimple": "~3.0",
+    "monolog/monolog": "~1.12",
+    "symfony/monolog-bridge": "~2.6",
+    "league/csv": "~6.2",
+    "php": ">=5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Druplicon\\": "src"
+    }
+  },
+  "license": "GPL2"
+}

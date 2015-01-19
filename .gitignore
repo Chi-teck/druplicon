@@ -1,0 +1,6 @@
+vendor
+config/config.php
+composer.lock
+databases
+logs
+.idea
