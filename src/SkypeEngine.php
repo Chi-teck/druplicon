@@ -117,11 +117,14 @@ class SkypeEngine {
   }
 
   /**
+   * Sends message to a given chat.
+   *
    * @param $chat_name
    * @param $message_body
    */
   public function send($chat_name, $message_body) {
     $this->proxy->Invoke("CHATMESSAGE $chat_name $message_body");
+    $this->logger->info(' => ' . $message_body);
   }
 
   /**
@@ -146,7 +149,7 @@ class SkypeEngine {
       $message_id = $matches[1];
       $message_data = $skype_engine->getMessageData($message_id);
 
-      $container['logger']->info("<= $notify");
+      $container['logger']->info(' <= ' . $message_data['BODY']);
 
       $event = new ChatIncomingMessage(
         $message_data
