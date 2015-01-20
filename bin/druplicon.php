@@ -18,7 +18,7 @@ use Druplicon\EventListener\BashIm;
 use Druplicon\EventListener\CoreFunctions;
 use Druplicon\EventListener\DoProjectIssue;
 use Druplicon\EventListener\Factoid;
-use Druplicon\EventListener\Greeting;
+use Druplicon\EventListener\DrupalStatus;
 use Druplicon\EventListener\System;
 use Druplicon\Events;
 use Druplicon\SkypeEngine;
@@ -103,13 +103,13 @@ $container['dispatcher'] = function ($container) {
       'onChatIncomingMessage'
     ]
   );
-/*  $dispatcher->addListener(
-    Events::SCHEDULE_TICK,
+  $dispatcher->addListener(
+    Events::CHAT_INCOMING_MESSAGE,
     [
-      new Greeting($container['skype_engine'], $container['logger'], $container['chat_name'], $container['state'], $container['http_client']),
-      'onScheduleTick'
+      new DrupalStatus($container['skype_engine'], $container['logger'], $container['http_client']),
+      'onChatIncomingMessage'
     ]
-  );*/
+  );
 
   return $dispatcher;
 };
