@@ -21,7 +21,7 @@ $container['schedule_timeout'] = 15 * 60;
 // Skype account.
 $container['user_id'] = 'druplicon';
 
-// Chat name
+// Chat name.
 $container['chat_name'] = '#druplicon/$chat_id';
 
 // Default timezone.
