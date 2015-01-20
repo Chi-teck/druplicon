@@ -162,6 +162,15 @@ class SkypeEngine {
 
     }
 
+    // Authorization request.
+    if ($container['accept_auth_requests'] && preg_match('/USER (.*) RECEIVEDAUTHREQUEST/', $notify, $matches)) {
+      $user_account = $matches[1];
+
+      $container['logger']->info('Auth request form ' . $user_account);
+      $skype_engine->proxy->Invoke("SET USER $user_account BUDDYSTATUS 2");
+
+    }
+
   }
 
 }

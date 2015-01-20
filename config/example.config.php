@@ -26,3 +26,6 @@ $container['chat_name'] = '#druplicon/$chat_id';
 
 // Default timezone.
 $container['time_zone'] = 'Europe/Moscow';
+
+// Auto-accept authorization requests.
+$container['accept_auth_requests'] = TRUE;
