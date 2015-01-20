@@ -11,14 +11,15 @@
 use Druplicon\Application;
 use Druplicon\Command\ImportCoreFunctions;
 use Druplicon\Command\ImportFactoids;
+use Druplicon\Command\CheckRequirements;
 use Druplicon\Command\SetupDatabase;
 use Druplicon\Command\StartBot;
 use Druplicon\EventListener\BashIm;
-use Druplicon\EventListener\System;
 use Druplicon\EventListener\CoreFunctions;
 use Druplicon\EventListener\DoProjectIssue;
 use Druplicon\EventListener\Factoid;
 use Druplicon\EventListener\Greeting;
+use Druplicon\EventListener\System;
 use Druplicon\Events;
 use Druplicon\SkypeEngine;
 use Druplicon\State;
@@ -146,5 +147,6 @@ $application->addCommands([
   new SetupDatabase(),
   new ImportFactoids(),
   new ImportCoreFunctions(),
+  new CheckRequirements(),
 ]);
 $application->run($input, $output);
