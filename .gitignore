@@ -1,5 +1,6 @@
 vendor
-config/config.php
+config
+!config/example.config.php
 composer.lock
 databases
 logs
