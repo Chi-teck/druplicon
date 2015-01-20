@@ -16,6 +16,7 @@ On some systems the installation proccess may be different.
 
 ### Installing the Druplicon
     cd path/to/druplicon
+    composer install
     cp config/example.config.php config/config.php
     vim config/config.php
     bin/druplicon.php check-requirements
